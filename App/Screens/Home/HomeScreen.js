@@ -5,6 +5,9 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 import Header from './Header'
+import Slider from './Slider';
+import Categories from './Categories';
+import BusinessList from './BusinessList';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -12,6 +15,11 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <View>
         <Header/>
+        <View style={{padding: 10}}>
+        <Slider/>
+        <Categories/>
+        <BusinessList/>
+        </View>
       </View>
       <View style={styles.tabContainer}>
         <TouchableOpacity style={styles.tabItem} onPress={() => navigation.navigate('home')}>
